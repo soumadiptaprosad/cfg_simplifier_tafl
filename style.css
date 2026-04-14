@@ -6,37 +6,37 @@
 
 /* ---------- CSS Custom Properties ---------- */
 :root {
-  --bg-primary: #0a0e1a;
-  --bg-secondary: #111827;
-  --bg-card: rgba(17, 24, 39, 0.7);
-  --bg-card-hover: rgba(25, 35, 55, 0.85);
-  --bg-input: rgba(15, 20, 35, 0.9);
-  --bg-glass: rgba(255, 255, 255, 0.04);
+  --bg-primary: #f0f4f8;
+  --bg-secondary: #ffffff;
+  --bg-card: rgba(255, 255, 255, 0.9);
+  --bg-card-hover: rgba(248, 250, 252, 0.98);
+  --bg-input: rgba(255, 255, 255, 0.95);
+  --bg-glass: rgba(0, 0, 0, 0.03);
 
-  --accent-cyan: #22d3ee;
-  --accent-cyan-dim: rgba(34, 211, 238, 0.15);
-  --accent-violet: #a78bfa;
-  --accent-violet-dim: rgba(167, 139, 250, 0.15);
-  --accent-amber: #fbbf24;
-  --accent-amber-dim: rgba(251, 191, 36, 0.15);
-  --accent-rose: #fb7185;
-  --accent-rose-dim: rgba(251, 113, 133, 0.15);
-  --accent-emerald: #34d399;
-  --accent-emerald-dim: rgba(52, 211, 153, 0.15);
+  --accent-cyan: #0891b2;
+  --accent-cyan-dim: rgba(8, 145, 178, 0.12);
+  --accent-violet: #7c3aed;
+  --accent-violet-dim: rgba(124, 58, 237, 0.12);
+  --accent-amber: #d97706;
+  --accent-amber-dim: rgba(217, 119, 6, 0.12);
+  --accent-rose: #e11d48;
+  --accent-rose-dim: rgba(225, 29, 72, 0.1);
+  --accent-emerald: #059669;
+  --accent-emerald-dim: rgba(5, 150, 105, 0.12);
 
-  --text-primary: #f1f5f9;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
-  --text-inverse: #0a0e1a;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+  --text-inverse: #ffffff;
 
-  --border-subtle: rgba(255, 255, 255, 0.06);
-  --border-accent: rgba(34, 211, 238, 0.3);
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --border-accent: rgba(8, 145, 178, 0.35);
 
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.5);
-  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.6);
-  --shadow-glow-cyan: 0 0 20px rgba(34, 211, 238, 0.15);
-  --shadow-glow-violet: 0 0 20px rgba(167, 139, 250, 0.15);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.07);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.09);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.11);
+  --shadow-glow-cyan: 0 0 20px rgba(8, 145, 178, 0.18);
+  --shadow-glow-violet: 0 0 20px rgba(124, 58, 237, 0.18);
 
   --radius-sm: 6px;
   --radius-md: 10px;
@@ -75,9 +75,9 @@ body::before {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 60% at 10% 20%, rgba(34, 211, 238, 0.06) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 50% at 85% 70%, rgba(167, 139, 250, 0.06) 0%, transparent 60%),
-    radial-gradient(ellipse 50% 40% at 50% 50%, rgba(251, 191, 36, 0.03) 0%, transparent 60%);
+    radial-gradient(ellipse 80% 60% at 10% 20%, rgba(8, 145, 178, 0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 85% 70%, rgba(124, 58, 237, 0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 50% 50%, rgba(217, 119, 6, 0.04) 0%, transparent 60%);
   pointer-events: none;
   z-index: 0;
 }
@@ -116,7 +116,7 @@ body::before {
   justify-content: space-between;
   padding: 1rem 2rem;
   border-bottom: 1px solid var(--border-subtle);
-  background: rgba(10, 14, 26, 0.8);
+  background: rgba(240, 244, 248, 0.88);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   position: sticky;
@@ -282,14 +282,14 @@ body::before {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--accent-cyan), #06b6d4);
+  background: linear-gradient(135deg, var(--accent-cyan), #0e7490);
   color: var(--text-inverse);
-  box-shadow: 0 2px 10px rgba(34, 211, 238, 0.3);
+  box-shadow: 0 2px 10px rgba(8, 145, 178, 0.3);
 }
 
 .btn-primary:hover {
   transform: translateY(-1px);
-  box-shadow: 0 4px 20px rgba(34, 211, 238, 0.4);
+  box-shadow: 0 4px 20px rgba(8, 145, 178, 0.4);
 }
 
 .btn-primary:active {
@@ -303,9 +303,9 @@ body::before {
 }
 
 .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.05);
   color: var(--text-primary);
-  border-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(0, 0, 0, 0.15);
 }
 
 .syntax-help {
@@ -417,9 +417,9 @@ body::before {
 }
 
 .anim-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.06);
   color: var(--text-primary);
-  border-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(0, 0, 0, 0.15);
 }
 
 .anim-btn:active {
@@ -439,15 +439,15 @@ body::before {
 .anim-btn.play-btn {
   width: 44px;
   height: 44px;
-  background: linear-gradient(135deg, var(--accent-cyan), #06b6d4);
+  background: linear-gradient(135deg, var(--accent-cyan), #0e7490);
   color: var(--text-inverse);
   border: none;
   font-size: 1.15rem;
-  box-shadow: 0 2px 12px rgba(34, 211, 238, 0.3);
+  box-shadow: 0 2px 12px rgba(8, 145, 178, 0.3);
 }
 
 .anim-btn.play-btn:hover {
-  box-shadow: 0 4px 20px rgba(34, 211, 238, 0.4);
+  box-shadow: 0 4px 20px rgba(8, 145, 178, 0.4);
   transform: scale(1.05);
 }
 
@@ -467,7 +467,7 @@ body::before {
 .anim-progress-bar {
   width: 100%;
   height: 6px;
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(0, 0, 0, 0.08);
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
@@ -491,7 +491,7 @@ body::before {
   height: 12px;
   background: var(--accent-cyan);
   border-radius: 50%;
-  box-shadow: 0 0 8px rgba(34, 211, 238, 0.5);
+  box-shadow: 0 0 8px rgba(8, 145, 178, 0.5);
   opacity: 0;
   transition: opacity 0.2s;
 }
@@ -538,7 +538,7 @@ body::before {
   -webkit-appearance: none;
   width: 60px;
   height: 4px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   outline: none;
 }
@@ -978,11 +978,11 @@ body::before {
 
   0%,
   100% {
-    box-shadow: 0 0 0px rgba(34, 211, 238, 0.0);
+    box-shadow: 0 0 0px rgba(8, 145, 178, 0.0);
   }
 
   50% {
-    box-shadow: 0 0 18px rgba(34, 211, 238, 0.25);
+    box-shadow: 0 0 18px rgba(8, 145, 178, 0.25);
   }
 }
 
