@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CFG Simplifier — Context-Free Grammar Simplification Visualizer</title>
+  <meta name="description" content="An interactive educational tool that demonstrates context-free grammar simplification step by step: removing null productions, unit productions, and useless symbols." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-wrapper">
+    <!-- ========== Header ========== -->
+    <header class="app-header">
+      <div class="logo">
+        <div class="logo-icon">G</div>
+        <div class="logo-text"><span>CFG Simplifier</span></div>
+      </div>
+      <div class="header-badge">Educational Tool</div>
+    </header>
+
+    <!-- ========== Main ========== -->
+    <main class="app-main">
+      <!-- ---- Sidebar ---- -->
+      <aside class="sidebar">
+        <!-- Preset Examples -->
+        <div class="sidebar-section">
+          <label class="sidebar-label" for="preset-select">
+            <span class="label-icon">📦</span> Load Example
+          </label>
+          <select class="preset-select" id="preset-select">
+            <option value="">— Select a preset grammar —</option>
+            <option value="example1">Example 1: Null + Unit + Useless</option>
+            <option value="example2">Example 2: Multiple Null Productions</option>
+            <option value="example3">Example 3: Chain Unit Productions</option>
+            <option value="example4">Example 4: Already Simplified</option>
+          </select>
+        </div>
+
+        <!-- Grammar Input -->
+        <div class="sidebar-section">
+          <label class="sidebar-label" for="grammar-input">
+            <span class="label-icon">✏️</span> Grammar Productions
+          </label>
+          <textarea
+            class="grammar-input"
+            id="grammar-input"
+            placeholder="Enter productions, one per line:&#10;S -> A B | a&#10;A -> a | ε&#10;B -> b | A"
+            spellcheck="false"
+          ></textarea>
+        </div>
+
+        <!-- Buttons -->
+        <div class="btn-group">
+          <button class="btn btn-primary" id="btn-simplify">
+            <span>⚡</span> Simplify
+          </button>
+          <button class="btn btn-secondary" id="btn-reset">
+            <span>↺</span> Reset
+          </button>
+        </div>
+
+        <!-- Syntax Help -->
+        <div class="syntax-help">
+          <strong>Syntax Guide</strong>
+          <ul>
+            <li>Use <code>-></code> or <code>→</code> for arrow</li>
+            <li>Use <code>|</code> to separate alternatives</li>
+            <li>Use <code>ε</code> for epsilon (empty string)</li>
+            <li>Uppercase letters = non-terminals</li>
+            <li>Lowercase letters / digits = terminals</li>
+            <li>First production's LHS = start symbol</li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- ---- Visualization ---- -->
+      <section class="viz-panel" id="viz-panel">
+        <div class="empty-state" id="empty-state">
+          <div class="empty-icon">🔧</div>
+          <div class="empty-title">Enter a Grammar to Begin</div>
+          <div class="empty-desc">
+            Type your context-free grammar in the input panel or load a preset example. 
+            Then click <strong>Simplify</strong> to see the step-by-step simplification process.
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
